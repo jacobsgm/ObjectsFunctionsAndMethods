@@ -152,7 +152,18 @@ def lines():
     # ------------------------------------------------------------------
     # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
- window = rg.RoseWindow()
+
+    window = rg.RoseWindow()
+
+    line1= rg.Line(rg.Point(200, 30), rg.Point(100, 50))
+
+    line2 = rg.Line(rg.Point(100, 80), rg.Point(200, 10))
+    line2.thickness = 10
+    line2center = line2.get_center()
+    print(line2center)
+    print(line2center.x)
+    print(line2center.y)
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
