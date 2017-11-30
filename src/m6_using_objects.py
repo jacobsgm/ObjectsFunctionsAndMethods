@@ -16,7 +16,7 @@ def main():
     # Test your functions by putting calls to them here:
     two_circles()
     circle_and_rectangle()
-
+    lines()
 
 def two_circles():
     """
@@ -156,14 +156,17 @@ def lines():
     window = rg.RoseWindow()
 
     line1= rg.Line(rg.Point(200, 30), rg.Point(100, 50))
-
+    line1.attach_to(window)
     line2 = rg.Line(rg.Point(100, 80), rg.Point(200, 10))
     line2.thickness = 10
-    line2center = line2.get_center()
+    line2center = line2.get_midpoint()
+    line2.attach_to(window)
     print(line2center)
     print(line2center.x)
     print(line2center.y)
 
+    window.render()
+    window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
