@@ -116,13 +116,13 @@ def circle_and_rectangle():
     rectangle = rg.Rectangle(point1, point2)
     rectangle.outline_color = 'green'
     rectangle.attach_to(window)
+    rcenter= rectangle.get_center()
 
     print(rectangle.outline_thickness)
     print(rectangle.fill_color)
     print(rectangle.get_center())
-    print(rectangle.get)
-
-
+    print(rcenter.x)
+    print(rcenter.y)
 
     window.render()
     window.close_on_mouse_click()
@@ -150,9 +150,9 @@ def lines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
-
+ window = rg.RoseWindow()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
